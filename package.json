@@ -2,7 +2,6 @@
   "name": "1-crud-service",
   "version": "1.0.0",
   "description": "Sistema C.R.U.D de posts de um blog com express e mongoose",
-  "type": "module",
   "main": "index.js",
   "author": "Lucas Santos <lucassantoswebdeveloper@gmail.com>",
   "license": "MIT",

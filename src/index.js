@@ -1,13 +1,15 @@
-import express from 'express'
-import mongoose from 'mongoose'
+const express = require('express')
+const mongoose = require('mongoose')
+
+const router = require('./routes')
 
 const app = express()
 
 
-
 app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
-app.get('/', ( req, res ) => res.json({message: 'Hello world!'}))
+app.use('/', router)
 
 mongoose.connect('mongodb://127.0.0.1:27017/crud-service')
 .then(() => {
